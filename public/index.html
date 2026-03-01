@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACS STI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
+    .error-fallback {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+    }
+    .error-fallback h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <iframe
+    id="main-frame"
+    src="https://197d-183-80-207-101.ngrok-free.app"
+    allowfullscreen
+    allow="clipboard-read; clipboard-write; camera; microphone"
+  ></iframe>
+
+  <div class="error-fallback" id="error-msg">
+    <div>
+      <h2>Service Unavailable</h2>
+      <p>The application is currently offline. Please try again later.</p>
+    </div>
+  </div>
+
+  <script>
+    const iframe = document.getElementById('main-frame');
+    iframe.onerror = function() {
+      iframe.style.display = 'none';
+      document.getElementById('error-msg').style.display = 'flex';
+    };
+  </script>
+</body>
+</html>
