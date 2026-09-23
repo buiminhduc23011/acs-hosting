@@ -1,0 +1,37 @@
+﻿# Node & Web
+node_modules/
+dist/
+build/
+out/
+.cache/
+.npm/
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.suo
+*.user
+*.userosscache
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+.BIN/
+.DS_Store
